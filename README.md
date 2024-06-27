@@ -20,7 +20,7 @@
 
 - Dot files are filtered out, toggling that permission to view can be useful
 
-- After multiselect, bult zip and download support
+- After multiselect, building of zip and download support
 
 - "Favorites" folders to quickly jump between directories, the fav list
   can be read from a config file by flask, or stored on `localStorage`,
