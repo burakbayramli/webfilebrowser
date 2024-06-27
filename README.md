@@ -26,7 +26,7 @@ the server. Communication between client and server is via Ajax.
 
 - Dot files are filtered out, toggling that permission to view can be useful
 
-- After multiselect, building of zip and download support
+- Multiselect and zip, then download feature.
 
 - "Favorites" folders to quickly jump between directories, the fav list
   can be read from a config file by flask, or stored on `localStorage`,
