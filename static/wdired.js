@@ -153,7 +153,8 @@ function done() {
     }    
     if (chosenAction == "delete") {
 	delete_checked(fromDir, checkedItems);
-    }    
+    }
+    document.getElementById("browse").checked = true;
     chosenAction = null;
     fromDir = null;
     checkedItems = [];    

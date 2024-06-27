@@ -1,14 +1,7 @@
 # -*- coding: utf-8 -*-
 from flask import Flask, render_template, request, session, redirect, send_file, jsonify
-from io import StringIO, BytesIO
-import os, glob, sys
-import json, random, base64, time as timelib
-import datetime, shutil, csv, io
-from urllib.request import urlopen
-import urllib, requests, re
-from bs4 import BeautifulSoup
-import urllib.request as urllib2
 from flask import Response, make_response, current_app
+import os, glob, shutil, csv, io
 
 app = Flask(__name__)
 
