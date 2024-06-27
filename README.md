@@ -54,5 +54,4 @@ the IP adress shown.
   not allow to skipping to any location, that feature would require
   using the range request feature of web transfers.
 
-- Upload
 
