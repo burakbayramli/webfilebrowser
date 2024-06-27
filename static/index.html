@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  </head>
+        
+  <script src="wdired.js"></script>  
+
+  <body onload='init()'>
+
+    <div style="margin: 15px">
+      <td><input id="chosen_dir" type="text" name="chosen_dir" value="/tmp"/></td>
+      <td><button onclick="listdir()">Go</button></td>
+      &nbsp;
+      <td><button onclick="up()">⬆</button></td>
+    </div>
+    <div style="margin: 10px">
+      <td>
+        &nbsp;
+        Browse<input type="radio" id="browse" value="Browse" name="multiradio"/>
+        Copy<input type="radio" id="copy" value="Copy" name="multiradio"/>
+        Move<input type="radio" id="move" value="Move" name="multiradio"/>
+        Delete<input type="radio" id="delete" value="Delete" name="multiradio"/>
+      </td>
+    </div>
+    <div>
+      <td><button style="margin: 15px; display: none;" id="done" onclick="done()">Done</button></td>
+    </div>
+    
+    <div id="output">
+    </div>
+  
+  </body>
+</html>
