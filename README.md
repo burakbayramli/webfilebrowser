@@ -16,6 +16,12 @@
 
 <img width="340" src="webfilebrowser.png"/>
 
+### Architecture
+
+The app is quite small, 300 LOC in all. Most of the work is done on the
+client side via Javascript, only file manipulation tasks are done on
+the server. Communication between client and server is via Ajax.
+
 ### TODO
 
 - Dot files are filtered out, toggling that permission to view can be useful
