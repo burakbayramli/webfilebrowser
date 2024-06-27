@@ -26,3 +26,7 @@
   can be read from a config file by flask, or stored on `localStorage`,
   specific to each user.
 
+- Support for peacemeal reading of video, currently video viewing does
+  not allow to skipping to any location, that feature would require
+  using the range request feature of web transfers.
+
