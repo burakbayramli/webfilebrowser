@@ -13,5 +13,5 @@ and click 'done'. In case of delete, simply click done.
 App allows viewing of text files, png, jpg image files, pdf, and mp4
 video.
 
-![](webfilebrowser.png)
+<img width="340" src="webfilebrowser.png"/>
 
