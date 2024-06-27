@@ -31,7 +31,7 @@ python app.py
 This starts a server accessible on `127.0.0.1` aka `localhost`. 
 
 To expose the server to others in the network, change the `app.py`
-line in `app.py` to say, e.g. for `192.168.1.1`,
+file to say, e.g. for `192.168.1.1`,
 
 ```
 app.run(host="192.168.1.1",port=8080)
