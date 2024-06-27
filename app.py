@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 from flask import Flask, render_template, request, session, redirect, send_file, jsonify
 from flask import Response, make_response, current_app
-import os, glob, shutil, csv, io
+import os, glob, shutil, csv, io, base64
 
 app = Flask(__name__)
 
@@ -88,8 +88,24 @@ def get_file(farg):
         response.headers['Content-Disposition'] = 'inline; filename=%s.pdf' % 'yourfilename'
         return response
         
+@app.route('/upload_main/<dir>')
+def upload_main(dir):
+    dir = base64.decodestring(bytes(dir,'utf-8')).decode('utf-8')
+    session['upload_dir'] = dir
+    return render_template("/upload.html",upload_dir=dir)
+
+@app.route('/upload', methods = ['GET', 'POST'])
+def upload_file():
+   if request.method == 'POST':
+      f = request.files['file']
+      print ("uploading", session['upload_dir'] + "/" + f.filename)
+      fout =  session['upload_dir'] + "/" + f.filename
+      f.save(fout)     
+      return 'file uploaded successfully'
+   return "OK"
         
 if __name__ == '__main__':
     app.debug = True
+    app.secret_key = "secretkeyverysecret" # needed for session[] to work
     app.run(host="localhost",port=5000)
 

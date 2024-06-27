@@ -23,6 +23,12 @@ function up() {
     listdir(newdir); 
 }
 
+function upload() {
+    var dir = document.getElementById("chosen_dir").value;
+    dir = btoa(dir);
+    window.location.href = "/upload_main/" + dir 
+}
+
 function clicked_dir(id) {
 
     console.log('clicked dir', id);
