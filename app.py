@@ -80,13 +80,13 @@ def get_file(farg):
         binary_pdf = open(filename,"rb").read()
         response = make_response(binary_pdf)
         response.headers['Content-Type'] = 'application/pdf'
-        response.headers['Content-Disposition'] = 'inline; filename=%s.pdf' % os.path.basename(filename)
+        response.headers['Content-Disposition'] = 'inline; filename=%s' % os.path.basename(filename)
         return response
     elif (".mp4" in filename):
         binary_vid = open(filename,"rb").read()
         response = make_response(binary_vid)
         response.headers['Content-Type'] = 'video/mp4'
-        response.headers['Content-Disposition'] = 'inline; filename=%s.pdf' % os.path.basename(filename)
+        response.headers['Content-Disposition'] = 'inline; filename=%s' % os.path.basename(filename)
         return response
         
 @app.route('/upload_main/<dir>')
