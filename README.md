@@ -42,16 +42,21 @@ the IP adress shown.
 
 ### TODO
 
-- Dot files are filtered out, toggling that permission to view can be useful
+- Dot files are filtered out, toggling that permission to view can be
+  useful. Priority: low.
 
-- Multiselect and zip, then download feature.
+- Multiselect and zip, then download feature. Priority: medium.
 
 - "Favorites" folders to quickly jump between directories, the fav list
   can be read from a config file by flask, or stored on `localStorage`,
-  specific to each user.
+  specific to each user. Priority: low.
 
 - Support for peacemeal reading of video, currently video viewing does
   not allow to skipping to any location, that feature would require
-  using the range request feature of web transfers.
+  using the range request feature of web transfers. Priority: low.
+
+- HTML view of local files does not show `img` references to local
+  images in the same directory because those refs also need their
+  `/get_file` calls. Priority: low.
 
 
