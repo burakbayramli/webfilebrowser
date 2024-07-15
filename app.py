@@ -73,9 +73,17 @@ def get_file(farg):
     elif (".html" in filename):
         return Response(open(filename).read(), mimetype='text/html')
     elif (".jpg" in filename):
-        return send_file(filename, mimetype='image/jpg')
+        binary_pdf = open(filename,"rb").read()
+        response = make_response(binary_pdf)
+        response.headers['Content-Type'] = 'image/jpg'
+        response.headers['Content-Disposition'] = 'inline; filename=%s' % os.path.basename(filename)
+        return response    
     elif (".png" in filename):
-        return send_file(filename, mimetype='image/png')
+        binary_pdf = open(filename,"rb").read()
+        response = make_response(binary_pdf)
+        response.headers['Content-Type'] = 'image/png'
+        response.headers['Content-Disposition'] = 'inline; filename=%s' % os.path.basename(filename)
+        return response    
     elif (".pdf" in filename):
         binary_pdf = open(filename,"rb").read()
         response = make_response(binary_pdf)
