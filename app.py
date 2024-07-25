@@ -72,7 +72,7 @@ def get_file(farg):
         return Response(open(filename).read(), mimetype='text/plain')
     elif (".html" in filename):
         return Response(open(filename).read(), mimetype='text/html')
-    elif (".jpg" in filename):
+    elif (".jpg" in filename or ".jpeg" in filename):
         binary_pdf = open(filename,"rb").read()
         response = make_response(binary_pdf)
         response.headers['Content-Type'] = 'image/jpg'
