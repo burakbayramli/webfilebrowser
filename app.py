@@ -78,6 +78,12 @@ def get_file(farg):
         response.headers['Content-Type'] = 'image/jpg'
         response.headers['Content-Disposition'] = 'inline; filename=%s' % os.path.basename(filename)
         return response    
+    elif (".jpg" in filename or ".gif" in filename):
+        binary_pdf = open(filename,"rb").read()
+        response = make_response(binary_pdf)
+        response.headers['Content-Type'] = 'image/gif'
+        response.headers['Content-Disposition'] = 'inline; filename=%s' % os.path.basename(filename)
+        return response    
     elif (".png" in filename):
         binary_pdf = open(filename,"rb").read()
         response = make_response(binary_pdf)
